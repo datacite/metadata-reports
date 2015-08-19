@@ -5,6 +5,21 @@
 Install the required packages (see [here](https://github.com/ropensci/rdatacite) for more information).
 
 
+```r
+options(stringsAsFactors = FALSE)
+
+# install required packages
+# install.packages("lubridate")
+# install.packages("ggplot2")
+# install.packages("knitr")
+# devtools::install_github("ropensci/solr")
+# devtools::install_github("ropensci/rdatacite")
+
+library('rdatacite')
+library('lubridate')
+library('ggplot2')
+library('knitr')
+```
 
 ## DataCite DOI Names created by Month
 
@@ -133,7 +148,7 @@ ggplot(dois, aes(x=date, y=value)) +
 
 ![](figure/unnamed-chunk-10-1.png) 
 
-This is indeed the case (we could calculate the ratio `DataPackage`/`DataFile` per month if there are still question). The number of `DataPackages` is growing organically, with an expected peek at the beginning for `DataPackages` that were deposited prior to starting DOIs.
+This is indeed the case (we could calculate the ratio `DataPackage`/`DataFile` per month if there are still questions). The number of `DataPackages` is growing organically, with an expected peek at the beginning for `DataPackages` that were deposited prior to starting DOIs.
 
 For the last example we can look at the [Zenodo/Github integration](https://guides.github.com/activities/citable-code/), where users can archive a Github repository in the Zenodo data repository. 
 
