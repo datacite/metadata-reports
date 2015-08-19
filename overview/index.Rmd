@@ -1,8 +1,10 @@
 ---
 title: "Number of DOI Names"
-output: 
+output:
   html_document:
-    keep_md: true
+    keep_md: yes
+  pdf_document:
+    toc: yes
 ---
 
 ```{r, eval=TRUE, echo=FALSE}
