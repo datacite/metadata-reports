@@ -64,8 +64,8 @@ kable(dois, format = "markdown")
 
 |X1                                                                                  |X2    |
 |:-----------------------------------------------------------------------------------|:-----|
-|TIB.PANGAEA - PANGAEA - Publishing Network for Geoscientific and Environmental Data |23410 |
-|DELFT.DATACENT - 3TU Datacentrum                                                    |12    |
+|TIB.PANGAEA - PANGAEA - Publishing Network for Geoscientific and Environmental Data |24664 |
+|DELFT.DATACENT - 3TU Datacentrum                                                    |14    |
 |ANDS.CENTRE-1 - Griffith University                                                 |0     |
 |ANDS.CENTRE-2 - CSSE Uni Melbourne                                                  |0     |
 |ANDS.CENTRE-3 - Monash University                                                   |0     |
@@ -107,11 +107,11 @@ kable(dois, format = "markdown")
 
 |X1                 |X2    |
 |:------------------|:-----|
-|König-Langlo, Gert |14116 |
-|Grobe, Hannes      |2913  |
+|König-Langlo, Gert |14118 |
+|Grobe, Hannes      |2905  |
 |Thiede, Jörn       |1103  |
+|Murray, James W    |1080  |
 |Boetius, Antje     |986   |
-|Fütterer, Dieter K |762   |
 
 Ninety-percent of the datasets have a particular author. Let#s look at the second peak at the end of 2014.
 
@@ -127,10 +127,10 @@ kable(dois, format = "markdown")
 |X1                                                                                  |X2     |
 |:-----------------------------------------------------------------------------------|:------|
 |BL.IMPERIAL - Imperial College London                                               |157315 |
-|CDL.DIGSCI - Digital Science                                                        |1867   |
-|TIB.PANGAEA - PANGAEA - Publishing Network for Geoscientific and Environmental Data |781    |
+|CDL.DIGSCI - Digital Science                                                        |1871   |
+|TIB.PANGAEA - PANGAEA - Publishing Network for Geoscientific and Environmental Data |782    |
+|TIB.WDCC - World Data Center for Climate                                            |48     |
 |INIST.ILL - Institut Laue-Langevin                                                  |18     |
-|CISTI.NRC - National Research Council                                               |16     |
 
 Again almost all ORCID links from a single data center. Let's see whether we again have one author in particular.
 
@@ -194,11 +194,11 @@ kable(dois, format = "markdown")
 
 |X1                                                                                  |X2    |
 |:-----------------------------------------------------------------------------------|:-----|
-|TIB.PANGAEA - PANGAEA - Publishing Network for Geoscientific and Environmental Data |15049 |
-|CDL.DIGSCI - Digital Science                                                        |12930 |
+|TIB.PANGAEA - PANGAEA - Publishing Network for Geoscientific and Environmental Data |17520 |
+|CDL.DIGSCI - Digital Science                                                        |14407 |
+|DELFT.DATACENT - 3TU Datacentrum                                                    |2792  |
 |CDL.UCDIRL - University College Dublin                                              |748   |
-|BL.IMPERIAL - Imperial College London                                               |453   |
-|DELFT.DATACENT - 3TU Datacentrum                                                    |145   |
+|BL.IMPERIAL - Imperial College London                                               |519   |
 
 Besides Pangaea that we already talked about earlier, almost all other ORCID links come from Digital Science DOIs, i.e. [Figshare](http://figshare.com/). What does the distribution of Figshare DOIs over time look like?
 
