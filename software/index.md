@@ -160,3 +160,29 @@ ggplot(dois, aes(x=date, y=value)) +
 
 ![](figure/unnamed-chunk-10-1.png)<!-- -->
 
+And who was the first registering software using DOIs? We can look at who registered DOIs for software before 2014:
+
+
+```r
+dois <- dc_facet(q = "resourceTypeGeneral:Software AND !datacentre_symbol:CERN.ZENODO AND created:[2011-01-01T00:00:00Z TO 2013-12-31T23:59:59Z]",facet.field = 'datacentre_facet', facet.sort = 'count', facet.limit = 10)
+dois <- dois$facet_fields$datacentre_facet
+kable(dois, format = "markdown")
+```
+
+
+
+|term                                                              |value |
+|:-----------------------------------------------------------------|:-----|
+|PURDUE.EZID - Purdue University                                   |1319  |
+|CERN.ZENODO - ZENODO - Research. Shared.                          |14    |
+|FIGSHARE.ARS - figshare Academic Research System                  |10    |
+|CDL.UCLAEEB - UCLA Department of Ecology and Evolutionary Biology |4     |
+|CDL.USGS - USGS Core Science Analytics and Synthesis (CSAS)       |3     |
+|BL.STFC - Science and Technology Facilities Council               |2     |
+|TIB.IPK - IPK Gatersleben                                         |2     |
+|CDL.NCAR - National Center for Atmospheric Research (NCAR)        |1     |
+|CDL.UWESCI - University of Washington eScience Institute          |1     |
+|DK.AAU - Aalborg University Library                               |1     |
+
+
+This is clearly Purdue, 

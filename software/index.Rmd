@@ -135,3 +135,13 @@ ggplot(dois, aes(x=date, y=value)) +
         axis.title.y = element_text(angle=0, vjust=1)) 
 ```
 
+And who was the first registering software using DOIs? We can look at who registered DOIs for software before 2014:
+
+```{r}
+dois <- dc_facet(q = "resourceTypeGeneral:Software AND !datacentre_symbol:CERN.ZENODO AND created:[2011-01-01T00:00:00Z TO 2013-12-31T23:59:59Z]",facet.field = 'datacentre_facet', facet.sort = 'count', facet.limit = 10)
+dois <- dois$facet_fields$datacentre_facet
+kable(dois, format = "markdown")
+```
+
+
+This is clearly Purdue, 
