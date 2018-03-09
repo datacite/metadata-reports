@@ -145,3 +145,11 @@ kable(dois, format = "markdown")
 
 
 This is clearly Purdue, specifically [NanoHub](https://nanohub.org/).
+
+And what is the first DOI for software registered by DataCite? 
+
+https://api.datacite.org/works?resource-type-id=software&sort=registered&order=asc&page[size]=1
+
+This DOI was registered September 7th, 2011 by the Leibniz Institute of Plant Genetics and Crop Plant Research (IPK) in Germany: 
+
+Colmsee, C., Flemming, S., Klapperstück, M., Lange, M., & Scholz, U. (2011). A case study for efficient management of high throughput primary lab data. Leibniz Institute of Plant Genetics and Crop Plant Research (IPK), Seeland OT Gatersleben, Corrensstraße 3, 06466, Germany. https://doi.org/10.5447/ipk/2011/0
