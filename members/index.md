@@ -29,7 +29,10 @@ library('lubridate')
 library('ggplot2')
 library('knitr')
 library('dplyr')
+library('plyr')
 library('scales')
+library('waffle')
+library('RColorBrewer')
 ```
 
 
@@ -177,3 +180,13 @@ ggplot(members4, aes(x = date, y = cumsum(c))) +
 ```
 
 ![](figure/unnamed-chunk-9-1.pdf)<!-- -->
+
+
+```r
+type_count <- count(members, 'type')
+types <- c(`Academic Institution (33)`= 33, `Research Institution (16)` = 16, `National Institution (15)` = 15, `Government Agency (6)` = 6, `Professional Society (1)` = 1, `Service Provider (12)` = 12)
+waffle(types, rows=5, title = 'DataCite Membership Types', colors=brewer.pal(6,"RdYlGn")) +
+theme(plot.title = element_text(size=18, face="bold", hjust=0))
+```
+
+![](figure/unnamed-chunk-10-1.pdf)<!-- -->
