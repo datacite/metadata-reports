@@ -190,3 +190,13 @@ theme(plot.title = element_text(size=18, face="bold", hjust=0))
 ```
 
 ![](figure/unnamed-chunk-10-1.pdf)<!-- -->
+
+
+```r
+region_count <- count(members, 'region')
+types <- c(`Americas (35)`= 35, `Asia and Pacific (7)` = 7, `Europe (38)` = 38, `Middle East and Africa (3)` = 3)
+waffle(types, rows=5, title = 'DataCite Membership by Region', colors=brewer.pal(4,"RdYlGn")) +
+theme(plot.title = element_text(size=18, face="bold", hjust=0))
+```
+
+![](figure/unnamed-chunk-11-1.pdf)<!-- -->
