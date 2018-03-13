@@ -67,7 +67,7 @@ ggplot(dois, aes(x=date, y=value)) +
         axis.title.y = element_text(angle=0, vjust=1)) 
 ```
 
-The integration was launched in 2014 and we can see a nice correlation with a [March 2014 blog post](https://github.com/blog/1840-improving-github-for-science) by Arfon Smith on the Github blog, describing the integration work.
+The integration was launched in 2014 and we can see a nice correlation with a [May 2014 blog post](https://github.com/blog/1840-improving-github-for-science) by Arfon Smith on the Github blog, describing the integration work.
 
 ## Zenodo
 
