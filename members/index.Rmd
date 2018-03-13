@@ -62,3 +62,73 @@ ggplot(members, aes(x = date, y = cumsum(c))) +
   axis.title.x = element_text(hjust=1),
   axis.title.y = element_text(angle=0, vjust=1)) 
 ```
+
+```{r}
+members1 <- subset(members, date >= "2016-01-01") 
+ggplot(members1, aes(x = date, y = cumsum(c), color = factor(region))) + 
+  geom_point() +
+  ggtitle("DataCite Membership over Time and by Region") +
+  xlab("Date Joined") + 
+  ylab("Total") +
+  theme(panel.background = element_rect(fill = "white"),
+  plot.title = element_text(size=16, face="bold", hjust=0.5),
+  axis.line = element_line(colour = "grey"),
+  axis.title.x = element_text(hjust=1),
+  axis.title.y = element_text(angle=0, vjust=1)) 
+```
+
+```{r}
+members2 <- subset(members, date < "2016-01-01") 
+ggplot(members2, aes(x = date, y = cumsum(c), color = factor(region))) + 
+  geom_point(aes(size = clients)) +
+  ggtitle("DataCite Membership over Time and Number of Clients") +
+  xlab("Date Joined") + 
+  ylab("Total") +
+  theme(panel.background = element_rect(fill = "white"),
+  plot.title = element_text(size=16, face="bold", hjust=0.5),
+  axis.line = element_line(colour = "grey"),
+  axis.title.x = element_text(hjust=1),
+  axis.title.y = element_text(angle=0, vjust=1)) 
+```
+
+```{r}
+members3 <- subset(members, date < "2016-01-01") 
+ggplot(members3, aes(x = date, y = cumsum(c), color = factor(region))) + 
+  geom_point(aes(size = dois)) +
+  ggtitle("DataCite Membership over Time and Number of DOIs") +
+  xlab("Date Joined") + 
+  ylab("Total") +
+  theme(panel.background = element_rect(fill = "white"),
+  plot.title = element_text(size=16, face="bold", hjust=0.5),
+  axis.line = element_line(colour = "grey"),
+  axis.title.x = element_text(hjust=1),
+  axis.title.y = element_text(angle=0, vjust=1)) 
+```
+
+```{r}
+members4 <- subset(members, region == "Americas") 
+ggplot(members4, aes(x = date, y = cumsum(c))) + 
+  geom_line(size = 0.5, color="#139dea") +
+  ggtitle("DataCite Membership from North America over Time") +
+  xlab("Date Joined") + 
+  ylab("Total") +
+  theme(panel.background = element_rect(fill = "white"),
+  plot.title = element_text(size=16, face="bold", hjust=0.5),
+  axis.line = element_line(colour = "grey"),
+  axis.title.x = element_text(hjust=1),
+  axis.title.y = element_text(angle=0, vjust=1)) 
+```
+
+```{r}
+members4 <- subset(members, region == "Europe") 
+ggplot(members4, aes(x = date, y = cumsum(c))) + 
+  geom_line(size = 0.5, color="#139dea") +
+  ggtitle("DataCite Membership from Europe over Time") +
+  xlab("Date Joined") + 
+  ylab("Total") +
+  theme(panel.background = element_rect(fill = "white"),
+  plot.title = element_text(size=16, face="bold", hjust=0.5),
+  axis.line = element_line(colour = "grey"),
+  axis.title.x = element_text(hjust=1),
+  axis.title.y = element_text(angle=0, vjust=1)) 
+```
