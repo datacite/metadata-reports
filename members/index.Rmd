@@ -1,0 +1,64 @@
+---
+title: "DataCite Members"
+output:
+  html_document:
+    keep_md: yes
+  pdf_document:
+    toc: yes
+---
+
+```{r, eval=TRUE, echo=FALSE}
+knitr::opts_chunk$set(
+  fig.width=10,
+  message=FALSE,
+  warning=FALSE,
+  fig.path='figure/',
+  fig.cap = ""
+)
+```
+
+Install the required packages (see [here](https://github.com/ropensci/rdatacite) for more information).
+
+```{r loadpkgs}
+options(stringsAsFactors = FALSE)
+
+# install required packages
+# install.packages("anytime")
+# install.packages("lubridate")
+# install.packages("ggplot2")
+# install.packages("knitr")
+# devtools::install_github("ropensci/solr")
+# devtools::install_github("ropensci/rdatacite")
+
+library('rdatacite')
+library('anytime')
+library('lubridate')
+library('ggplot2')
+library('knitr')
+library('dplyr')
+```
+
+
+```{r}
+input.name <- "members-2018-03-06.csv"
+
+# get list of members from CSV file
+members <- read.csv(input.name, stringsAsFactors=FALSE, header=TRUE, sep=";")
+members$date <- as.Date(members$date, , format="%d.%m.%y")
+members <- members[order(members$date),]
+members$c <- 1
+
+```
+
+```{r}
+ggplot(members, aes(x = date, y = cumsum(c))) + 
+  geom_line(size = 0.5, color="#139dea") +
+  ggtitle("DataCite Membership over Time") +
+  xlab("Date Joined") + 
+  ylab("Total") +
+  theme(panel.background = element_rect(fill = "white"),
+  plot.title = element_text(size=16, face="bold", hjust=0.5),
+  axis.line = element_line(colour = "grey"),
+  axis.title.x = element_text(hjust=1),
+  axis.title.y = element_text(angle=0, vjust=1)) 
+```
