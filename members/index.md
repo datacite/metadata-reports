@@ -193,10 +193,32 @@ theme(plot.title = element_text(size=18, face="bold", hjust=0))
 
 
 ```r
-region_count <- count(members, 'region')
-types <- c(`Americas (35)`= 35, `Asia and Pacific (7)` = 7, `Europe (38)` = 38, `Middle East and Africa (3)` = 3)
-waffle(types, rows=5, title = 'DataCite Membership by Region', colors=brewer.pal(4,"RdYlGn")) +
+members5 <- subset(members, date <= "2010-12-31") 
+region_count_2010 <- count(members5, 'region')
+types <- c(`Europe (10)` = 10, `Americas (6)`= 6, `Asia and Pacific (2)` = 2, `Middle East and Africa (0)` = 0)
+waffle(types, rows=5, title = 'DataCite Membership by Region 2010', colors=brewer.pal(4,"RdYlGn"), keep = TRUE) +
 theme(plot.title = element_text(size=18, face="bold", hjust=0))
 ```
 
 ![](figure/unnamed-chunk-11-1.pdf)<!-- -->
+
+
+```r
+members6 <- subset(members, date <= "2014-12-31") 
+region_count_2014 <- count(members6, 'region')
+types <- c(`Europe (16)` = 16, `Americas (7)`= 7, `Asia and Pacific (5)` = 5, `Middle East and Africa (1)` = 1)
+waffle(types, rows=5, title = 'DataCite Membership by Region 2014', colors=brewer.pal(4,"RdYlGn"), keep = TRUE) +
+theme(plot.title = element_text(size=18, face="bold", hjust=0))
+```
+
+![](figure/unnamed-chunk-12-1.pdf)<!-- -->
+
+
+```r
+region_count <- count(members, 'region')
+types <- c(`Europe (38)` = 38, `Americas (35)`= 35, `Asia and Pacific (7)` = 7, `Middle East and Africa (3)` = 3)
+waffle(types, rows=5, title = 'DataCite Membership by Region 2018', colors=brewer.pal(4,"RdYlGn"), keep = TRUE) +
+theme(plot.title = element_text(size=18, face="bold", hjust=0))
+```
+
+![](figure/unnamed-chunk-13-1.pdf)<!-- -->
