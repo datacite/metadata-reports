@@ -193,7 +193,7 @@ kable(dois, format = "markdown")
 |DK.AAU - Aalborg University Library                               |1     |
 
 
-This is clearly Purdue, specifically [NanoHub](https://nanohub.org/).
+This is clearly Purdue, specifically [nanoHUB](https://nanohub.org/).
 
 And what is the first DOI for software registered by DataCite? 
 
