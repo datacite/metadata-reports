@@ -1,11 +1,16 @@
 ---
 title: "DOI Registrations for Software"
+author: "Martin Fenner, Daniel S. Katz, Lars Holm Nielsen, Arfon M. Smith"
 output:
   html_document:
     keep_md: yes
   pdf_document:
     toc: yes
 ---
+
+We know that software is important in research, and some of the scholarly communications community, for example, [in FORCE11](https://www.force11.org/group/software-citation-implementation-working-group), has been pushing the concept of software citations as a method to allow software developers and maintainers to get academic credit for their work: software releases are published and assigned DOIs, and software users then cite these releases when they publish research that uses the software.
+
+DataCite recently examined the DOIs that have been created for software, and found that the number of new DOIs created for software is growing roughly exponentially, now reaching about 2000 software DOIs per month, with some spikes of around 4000 per month in some of 2017. The data and results are shown here, as follows:
 
 
 
@@ -41,8 +46,8 @@ kable(dois, format = "markdown")
 
 |term                                                                                       |value |
 |:------------------------------------------------------------------------------------------|:-----|
-|CERN.ZENODO - ZENODO - Research. Shared.                                                   |41345 |
-|FIGSHARE.ARS - figshare Academic Research System                                           |4225  |
+|CERN.ZENODO - ZENODO - Research. Shared.                                                   |41346 |
+|FIGSHARE.ARS - figshare Academic Research System                                           |4226  |
 |PURDUE.NCIB - National Cancer Institute, Bioconductor                                      |2769  |
 |PURDUE.EZID - Purdue University                                                            |2463  |
 |OSTI.DOE - DOE Generic                                                                     |736   |
@@ -80,7 +85,10 @@ ggplot(dois, aes(x=date, y=value)) +
 
 ![](figure/unnamed-chunk-4-1.png)<!-- -->
 
-The integration was launched in 2014 and we can see a nice correlation with a [March 2014 blog post](https://github.com/blog/1840-improving-github-for-science) by Arfon Smith on the Github blog, describing the integration work.
+The integration was launched in February 2014 and we can see a nice correlation with this data, and with a [May 2014 blog post](https://github.com/blog/1840-improving-github-for-science) by Arfon Smith on the Github blog, describing (and advertizing) the integration work.
+
+Also, in late 2016, the [FORCE11 Software Citation Principles](https://doi.org/10.7717/peerj-cs.86) were published (Sept. 2016), and the [GitHub Guide to Making your Code Citable](https://guides.github.com/activities/citable-code/) was updated (Oct. 2016).  There appears to be a change of in the rate of growth around this time as well.
+
 
 ## Zenodo
 
@@ -181,7 +189,7 @@ kable(dois, format = "markdown")
 |BL.STFC - Science and Technology Facilities Council               |2     |
 |TIB.IPK - IPK Gatersleben                                         |2     |
 |CDL.NCAR - National Center for Atmospheric Research (NCAR)        |1     |
-|CDL.UWESCI - University of Washington eScience Institute          |1     |
+|CDL.UWL - University of Washington                                |1     |
 |DK.AAU - Aalborg University Library                               |1     |
 
 
