@@ -183,13 +183,35 @@ ggplot(members4, aes(x = date, y = cumsum(c))) +
 
 
 ```r
-type_count <- count(members, 'type')
-types <- c(`Academic Institution (33)`= 33, `Research Institution (16)` = 16, `National Institution (15)` = 15, `Government Agency (6)` = 6, `Professional Society (1)` = 1, `Service Provider (12)` = 12)
-waffle(types, rows=5, title = 'DataCite Membership Types', colors=brewer.pal(6,"RdYlGn")) +
+members5 <- subset(members, date <= "2010-12-31") 
+type_count5 <- count(members5, 'type')
+types <- c(`Academic Institution (5)`= 5, `Research Institution (3)` = 3, `National Institution (9)` = 9, `Government Agency (1)` = 1, `Professional Society (0)` = 0, `Service Provider (0)` = 0)
+waffle(types, rows=5, title = 'DataCite Membership Types 2010', colors=brewer.pal(6,"RdYlGn")) +
 theme(plot.title = element_text(size=18, face="bold", hjust=0))
 ```
 
 ![](figure/unnamed-chunk-10-1.pdf)<!-- -->
+
+
+```r
+members6 <- subset(members, date <= "2014-12-31") 
+type_count6 <- count(members6, 'type')
+types <- c(`Academic Institution (9)`= 9, `Research Institution (6)` = 6, `National Institution (12)` = 12, `Government Agency (1)` = 1, `Professional Society (1)` = 1, `Service Provider (0)` = 0)
+waffle(types, rows=5, title = 'DataCite Membership Types 2014', colors=brewer.pal(6,"RdYlGn")) +
+theme(plot.title = element_text(size=18, face="bold", hjust=0))
+```
+
+![](figure/unnamed-chunk-11-1.pdf)<!-- -->
+
+
+```r
+type_count <- count(members, 'type')
+types <- c(`Academic Institution (33)`= 33, `Research Institution (16)` = 16, `National Institution (15)` = 15, `Government Agency (6)` = 6, `Professional Society (1)` = 1, `Service Provider (12)` = 12)
+waffle(types, rows=5, title = 'DataCite Membership Types 2018', colors=brewer.pal(6,"RdYlGn")) +
+theme(plot.title = element_text(size=18, face="bold", hjust=0))
+```
+
+![](figure/unnamed-chunk-12-1.pdf)<!-- -->
 
 
 ```r
@@ -200,7 +222,7 @@ waffle(types, rows=5, title = 'DataCite Membership by Region 2010', colors=brewe
 theme(plot.title = element_text(size=18, face="bold", hjust=0))
 ```
 
-![](figure/unnamed-chunk-11-1.pdf)<!-- -->
+![](figure/unnamed-chunk-13-1.pdf)<!-- -->
 
 
 ```r
@@ -211,7 +233,7 @@ waffle(types, rows=5, title = 'DataCite Membership by Region 2014', colors=brewe
 theme(plot.title = element_text(size=18, face="bold", hjust=0))
 ```
 
-![](figure/unnamed-chunk-12-1.pdf)<!-- -->
+![](figure/unnamed-chunk-14-1.pdf)<!-- -->
 
 
 ```r
@@ -221,4 +243,4 @@ waffle(types, rows=5, title = 'DataCite Membership by Region 2018', colors=brewe
 theme(plot.title = element_text(size=18, face="bold", hjust=0))
 ```
 
-![](figure/unnamed-chunk-13-1.pdf)<!-- -->
+![](figure/unnamed-chunk-15-1.pdf)<!-- -->

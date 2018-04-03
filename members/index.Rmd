@@ -168,10 +168,26 @@ ggplot(members4, aes(x = date, y = cumsum(c))) +
   axis.title.y = element_text(angle=0, vjust=1)) 
 ```
 
-```{r}
+```{r, fig.width=6, fig.height=4}
+members5 <- subset(members, date <= "2010-12-31") 
+type_count5 <- count(members5, 'type')
+types <- c(`Academic Institution (5)`= 5, `Research Institution (3)` = 3, `National Institution (9)` = 9, `Government Agency (1)` = 1, `Professional Society (0)` = 0, `Service Provider (0)` = 0)
+waffle(types, rows=5, title = 'DataCite Membership Types 2010', colors=brewer.pal(6,"RdYlGn")) +
+theme(plot.title = element_text(size=18, face="bold", hjust=0))
+```
+
+```{r, fig.width=6, fig.height=4}
+members6 <- subset(members, date <= "2014-12-31") 
+type_count6 <- count(members6, 'type')
+types <- c(`Academic Institution (9)`= 9, `Research Institution (6)` = 6, `National Institution (12)` = 12, `Government Agency (1)` = 1, `Professional Society (1)` = 1, `Service Provider (0)` = 0)
+waffle(types, rows=5, title = 'DataCite Membership Types 2014', colors=brewer.pal(6,"RdYlGn")) +
+theme(plot.title = element_text(size=18, face="bold", hjust=0))
+```
+
+```{r, fig.width=15, fig.height=4}
 type_count <- count(members, 'type')
 types <- c(`Academic Institution (33)`= 33, `Research Institution (16)` = 16, `National Institution (15)` = 15, `Government Agency (6)` = 6, `Professional Society (1)` = 1, `Service Provider (12)` = 12)
-waffle(types, rows=5, title = 'DataCite Membership Types', colors=brewer.pal(6,"RdYlGn")) +
+waffle(types, rows=5, title = 'DataCite Membership Types 2018', colors=brewer.pal(6,"RdYlGn")) +
 theme(plot.title = element_text(size=18, face="bold", hjust=0))
 ```
 
