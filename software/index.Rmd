@@ -67,7 +67,10 @@ ggplot(dois, aes(x=date, y=value)) +
         axis.title.y = element_text(angle=0, vjust=1)) 
 ```
 
-The integration was launched in 2014 and we can see a nice correlation with a [May 2014 blog post](https://github.com/blog/1840-improving-github-for-science) by Arfon Smith on the Github blog, describing the integration work.
+The integration was launched in February 2014 and we can see a nice correlation with this data, and with a [May 2014 blog post](https://github.com/blog/1840-improving-github-for-science) by Arfon Smith on the Github blog, describing (and advertizing) the integration work.
+
+Also, in late 2016, the [FORCE11 Software Citation Principles](https://doi.org/10.7717/peerj-cs.86) were published (Sept. 2016), and the [GitHub Guide to Making your Code Citable](https://guides.github.com/activities/citable-code/) was updated (Oct. 2016).  There appears to be a change of in the rate of growth around this time as well.
+
 
 ## Zenodo
 
