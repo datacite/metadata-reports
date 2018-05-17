@@ -1,8 +1,12 @@
 DataCite recently examined the DOIs that have been created for software (see https://doi.org/10.5438/1nmy-9902)
 I have used the [R code provided](https://github.com/datacite/metadata-reports/blob/master/software/index.md) to examine the DOIs that have been created for preprints
 
-The number of new DOIs created with 'Preprint' as resource type is growing rapidly, now reaching about 2500 preprint DOIs per month, e 
-However, the total number of DOIs registered at OSF with this resource type is less than the number of preprints hosted at OSF, raising the question whether all preprints are consistently assigned this resource type, or whether preprints only started to be added as a resource type
+The number of new DOIs created with 'Preprint' as resource type is growing rapidly, now reaching about 2500 preprint DOIs per month.
+
+However, the total number of DOIs registered at OSF with this resource type (11523 on May 17, 2018) is less than the number of preprints hosted at OSF (11523 on May 17, 2018). 
+
+This raises the question whether all preprints are consistently assigned this resource type, or whether this resource type only became available 
+
 The data and results are shown here, as follows:
 
 
