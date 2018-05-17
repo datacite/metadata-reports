@@ -115,8 +115,12 @@ ggplot(dois, aes(x=date, y=value)) +
 
 ![](figure/datacite_preprints_OSF_plot.png)<!-- -->
 
-What happened with DOI registration for preprints outside of OSF? For example at ResearchGate?
+The large peak in December 2017 (also observed in the overall figure) seems to be largely, but not completely attributable to OSF. 
 
+
+## ResearchGate
+
+What happened with DOI registration for preprints outside of OSF? For example at ResearchGate?
 
 ```r
 last_month <- ceiling_date(now() - months(1), "month")
