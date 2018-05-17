@@ -1,21 +1,12 @@
----
-title: "DOI Registrations for Software"
-author: "Martin Fenner, Daniel S. Katz, Lars Holm Nielsen, Arfon M. Smith"
-output:
-  html_document:
-    keep_md: yes
-  pdf_document:
-    toc: yes
----
+DataCite recently examined the DOIs that have been created for software (see https://doi.org/10.5438/1nmy-9902)
+I have used the [R code provided](https://github.com/datacite/metadata-reports/blob/master/software/index.md) to examine the DOIs that have been created for preprints
 
-We know that software is important in research, and some of the scholarly communications community, for example, [in FORCE11](https://www.force11.org/group/software-citation-implementation-working-group), has been pushing the concept of software citations as a method to allow software developers and maintainers to get academic credit for their work: software releases are published and assigned DOIs, and software users then cite these releases when they publish research that uses the software.
-
-DataCite recently examined the DOIs that have been created for software, and found that the number of new DOIs created for software is growing roughly exponentially, now reaching about 2000 software DOIs per month, with some spikes of around 4000 per month in some of 2017. The data and results are shown here, as follows:
+The number of new DOIs created with 'Preprint' as resource type is growing rapidly, now reaching about 2000 preprint DOIs per month, with some spikes of around 4000 per month in some of 2017. The data and results are shown here, as follows:
 
 
 
 Install the required packages (see [here](https://github.com/ropensci/rdatacite) for more information).
-
+NB 
 
 ```r
 options(stringsAsFactors = FALSE)
