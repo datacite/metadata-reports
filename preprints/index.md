@@ -1,12 +1,15 @@
 DataCite recently examined the DOIs that have been created for software (see https://doi.org/10.5438/1nmy-9902)
 I have used the [R code provided](https://github.com/datacite/metadata-reports/blob/master/software/index.md) to examine the DOIs that have been created for preprints
 
-The number of new DOIs created with 'Preprint' as resource type is growing rapidly, now reaching about 2000 preprint DOIs per month, with some spikes of around 4000 per month in some of 2017. The data and results are shown here, as follows:
+The number of new DOIs created with 'Preprint' as resource type is growing rapidly, now reaching about 2000 preprint DOIs per month, with some spikes of around 4000 per month in some of 2017. However, the total number of DOIs registered at OSF with this resource type is less than the number of preprints hosted at OSF, raising the question whether all preprints are consistently assigned this resource type. 
+
+The data and results are shown here, as follows:
 
 
 
 Install the required packages (see [here](https://github.com/ropensci/rdatacite) for more information).
-NB 
+NB Compared to the original script, I also had to install the curl package before getting the ropensci package to work. 
+I also installed all packages from cran. 
 
 ```r
 options(stringsAsFactors = FALSE)
@@ -15,16 +18,18 @@ options(stringsAsFactors = FALSE)
 # install.packages("lubridate")
 # install.packages("ggplot2")
 # install.packages("knitr")
-# devtools::install_github("ropensci/solr")
-# devtools::install_github("ropensci/rdatacite")
+# install.packages("curl")
+# install.packages("rdatacite")
+# install.packages("solr")
 
-library('rdatacite')
 library('lubridate')
 library('ggplot2')
 library('knitr')
+library('curl')
+library('rdatacite')
 ```
 
-How many DOIs for software have been registered so far, and where?
+How many DOIs for preprints have been registered so far, and where?
 
 
 ```r
