@@ -110,13 +110,13 @@ ggplot(dois, aes(x=date, y=value)) +
 
 ![](figure/datacite_preprints_OSF_plot.png)<!-- -->
 
-What happened with DOI registration for software outside of Zenodo? For example Figshare and Bioconductor?
+What happened with DOI registration for preprints outside of OSF? For example at ResearchGate?
 
 
 ```r
 last_month <- ceiling_date(now() - months(1), "month")
 last_month <- strftime(last_month, "UTC", format = "%FT%TZ")
-dois <- dc_facet(q = 'datacentre_symbol:FIGSHARE.ARS AND resourceTypeGeneral:Software', facet.date = 'created', facet.date.start = "2011-01-01T00:00:00Z", facet.date.end = last_month, facet.date.gap = "+1MONTH")
+dois <- dc_facet(q = 'datacentre_symbol:RG.RG AND resourceType:Preprint', facet.date = 'created', facet.date.start = "2013-01-01T00:00:00Z", facet.date.end = last_month, facet.date.gap = "+1MONTH")
 dois <- dois$facet_dates$created
 dois$date <- as.Date(dois$date)
 ```
@@ -124,73 +124,15 @@ dois$date <- as.Date(dois$date)
 
 ```r
 ggplot(dois, aes(x=date, y=value)) +
-  ggtitle("DOIs for Software created by Month at Figshare") +
+  ggtitle("DOIs for Preprint created by Month at ResearchGate") +
   geom_bar(stat="identity") + 
   scale_x_date("Year") +
-  scale_y_continuous("DOI names", limits=c(0,5000)) +
+  scale_y_continuous("DOIs", limits=c(0,3000)) +
   theme(panel.background = element_rect(fill = "white"),
         axis.line = element_line(colour = "grey"),
         axis.title.x = element_text(hjust=1),
         axis.title.y = element_text(angle=0, vjust=1)) 
+  ggsave("datacite_preprints_RG_plot.png") 
 ```
 
-![](figure/unnamed-chunk-8-1.png)<!-- -->
-
-
-```r
-last_month <- ceiling_date(now() - months(1), "month")
-last_month <- strftime(last_month, "UTC", format = "%FT%TZ")
-dois <- dc_facet(q = 'datacentre_symbol:PURDUE.NCIB AND resourceTypeGeneral:Software', facet.date = 'created', facet.date.start = "2011-01-01T00:00:00Z", facet.date.end = last_month, facet.date.gap = "+1MONTH")
-dois <- dois$facet_dates$created
-dois$date <- as.Date(dois$date)
-```
-
-
-```r
-ggplot(dois, aes(x=date, y=value)) +
-  ggtitle("DOIs for Software created by Month at Bioconductor") +
-  geom_bar(stat="identity") + 
-  scale_x_date("Year") +
-  scale_y_continuous("DOI names", limits=c(0,5000)) +
-  theme(panel.background = element_rect(fill = "white"),
-        axis.line = element_line(colour = "grey"),
-        axis.title.x = element_text(hjust=1),
-        axis.title.y = element_text(angle=0, vjust=1)) 
-```
-
-![](figure/unnamed-chunk-10-1.png)<!-- -->
-
-And who was the first registering software using DOIs? We can look at who registered DOIs for software before 2014:
-
-
-```r
-dois <- dc_facet(q = "resourceTypeGeneral:Software AND !datacentre_symbol:CERN.ZENODO AND created:[2011-01-01T00:00:00Z TO 2013-12-31T23:59:59Z]",facet.field = 'datacentre_facet', facet.sort = 'count', facet.limit = 10)
-dois <- dois$facet_fields$datacentre_facet
-kable(dois, format = "markdown")
-```
-
-
-
-|term                                                              |value |
-|:-----------------------------------------------------------------|:-----|
-|PURDUE.EZID - Purdue University                                   |1319  |
-|CERN.ZENODO - ZENODO - Research. Shared.                          |14    |
-|FIGSHARE.ARS - figshare Academic Research System                  |10    |
-|CDL.UCLAEEB - UCLA Department of Ecology and Evolutionary Biology |4     |
-|CDL.USGS - USGS Core Science Analytics and Synthesis (CSAS)       |3     |
-|BL.STFC - Science and Technology Facilities Council               |2     |
-|TIB.IPK - IPK Gatersleben                                         |2     |
-|CDL.NCAR - National Center for Atmospheric Research (NCAR)        |1     |
-|CDL.UWL - University of Washington                                |1     |
-|DK.AAU - Aalborg University Library                               |1     |
-
-
-This is clearly Purdue, specifically [nanoHUB](https://nanohub.org/).
-
-And what is the first DOI for software registered by DataCite? 
-
-https://api.datacite.org/works?resource-type-id=software&sort=registered&order=asc&page[size]=1
-
-This DOI was registered September 7th, 2011 by the Leibniz Institute of Plant Genetics and Crop Plant Research (IPK) in Germany: 
-
-Colmsee, C., Flemming, S., Klapperstück, M., Lange, M., & Scholz, U. (2011). A case study for efficient management of high throughput primary lab data. Leibniz Institute of Plant Genetics and Crop Plant Research (IPK), Seeland OT Gatersleben, Corrensstraße 3, 06466, Germany. https://doi.org/10.5447/ipk/2011/0
+![](figure/datacite_preprints_RG_plot.png)<!-- -->
