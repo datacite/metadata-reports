@@ -1,0 +1,59 @@
+{
+	"@context": "https://raw.githubusercontent.com/codemeta/codemeta/master/codemeta.jsonld",
+	"@type": "SoftwareSourceCode",
+	"@id": "https://doi.org/10.5438/wr0x-e194",
+	"agents": [
+    {
+      "@id": "https://orcid.org/0000-0003-0077-4738",
+      "@type": "person",
+      "name": "Martin Fenner",
+      "mustBeCited": true,
+      "isMaintainer": true,
+      "isRightsHolder": true
+    },
+    {
+      "@id": "https://orcid.org/0000-0001-5934-7525",
+      "@type": "person",
+      "name": "Daniel S. Katz",
+      "mustBeCited": true,
+      "isMaintainer": true,
+      "isRightsHolder": true
+    },
+    {
+      "@id": "https://orcid.org/0000-0002-3957-2474",
+      "@type": "person",
+      "name": "Arfon Smith",
+      "mustBeCited": true,
+      "isMaintainer": true,
+      "isRightsHolder": true
+    },
+    {
+      "@id": "https://orcid.org/0000-0001-8135-3489",
+      "@type": "person",
+      "name": "Lars Holm Nielsen",
+      "mustBeCited": true,
+      "isMaintainer": true,
+      "isRightsHolder": true
+    },
+  ],
+	"identifier": "https://doi.org/10.5438/wr0x-e194",
+	"codeRepository": "https://github.com/datacite/metadata-reports",
+	"controlledTem": "software",
+	"dateCreated": "2018-03-09",
+	"datePublished": "2018-05-17",
+	"dateModified": "2018-05-17",
+	"description": "Analysis of DataCite DOIs registered for software, broken down by repository and over time.",
+	"isAutomatedBuild": true,
+	"licenseId": "MIT",
+	"publisher": "DataCite",
+	"tags": [
+		"doi",
+		"software",
+		"codemeta"
+	],
+	"title": "DOI Registrations for Software",
+	"programmingLanguage": {
+		"name": "R",
+		"URL": "https://www.r-project.org/"
+	}
+}
