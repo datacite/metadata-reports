@@ -4,5 +4,5 @@ DataCite recently examined the DOIs that have been created for software (see htt
 
 I have used the [R code provided](https://github.com/datacite/metadata-reports/blob/master/software/index.md) to examine the DOIs that have been created for **preprints**
 
-Code and results here: 
+Code and results here: [index.md](https://github.com/bmkramer/datacite-metadata-reports/blob/master/preprints/index.md)
 
