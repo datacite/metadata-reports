@@ -3,9 +3,9 @@ I have used the [R code provided](https://github.com/datacite/metadata-reports/b
 
 The number of new DOIs created with 'Preprint' as resource type is growing rapidly, now reaching about 2500 preprint DOIs per month.
 
-However, the total number of DOIs registered at OSF with this resource type (11523 on May 17, 2018) is less than the number of preprints hosted at OSF (11523 on May 17, 2018). 
+However, the total number of DOIs registered at OSF with this resource type (9027 on May 17, 2018) is less than the number of preprints hosted at OSF (11523 on May 17, 2018). 
 
-This raises the question whether all preprints are consistently assigned this resource type, or whether this resource type only became available 
+This raises the question whether all preprints are currently consistently assigned this resource type, and/or whether this resource type only became official a while after launch of the first OSF preprint servers in the fall of 2016. 
 
 The data and results are shown here, as follows:
 
@@ -86,6 +86,7 @@ ggplot(dois, aes(x=date, y=value)) +
 
 
 ## OSF
+
 
 Most of these DOIs for software are registered by OSF (COS). 
 
