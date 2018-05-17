@@ -34,7 +34,7 @@
       "mustBeCited": true,
       "isMaintainer": true,
       "isRightsHolder": true
-    },
+    }
   ],
 	"identifier": "https://doi.org/10.5438/wr0x-e194",
 	"codeRepository": "https://github.com/datacite/metadata-reports",
