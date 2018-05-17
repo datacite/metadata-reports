@@ -53,6 +53,7 @@ kable(dois, format = "markdown")
 |SND.SU - Stockholm University                           |40    |
 
 
+
 How did these numbers change over time?
 
 ```r
@@ -78,20 +79,17 @@ ggplot(dois, aes(x=date, y=value)) +
 
 ![](datacite_preprints_plot.png)<!-- -->
 
-The integration was launched in February 2014 and we can see a nice correlation with this data, and with a [May 2014 blog post](https://github.com/blog/1840-improving-github-for-science) by Arfon Smith on the Github blog, describing (and advertizing) the integration work.
-
-Also, in late 2016, the [FORCE11 Software Citation Principles](https://doi.org/10.7717/peerj-cs.86) were published (Sept. 2016), and the [GitHub Guide to Making your Code Citable](https://guides.github.com/activities/citable-code/) was updated (Oct. 2016).  There appears to be a change of in the rate of growth around this time as well.
 
 
-## Zenodo
+## OSF
 
-Most of these DOIs for software are registered by Zenodo. 
+Most of these DOIs for software are registered by OSF (COS). 
 
 
 ```r
 last_month <- ceiling_date(now() - months(1), "month")
 last_month <- strftime(last_month, "UTC", format = "%FT%TZ")
-dois <- dc_facet(q = 'datacentre_symbol:CERN.ZENODO AND resourceTypeGeneral:Software', facet.date = 'created', facet.date.start = "2011-01-01T00:00:00Z", facet.date.end = last_month, facet.date.gap = "+1MONTH")
+dois <- dc_facet(q = 'datacentre_symbol:CDL.COS AND resourceType:Preprint', facet.date = 'created', facet.date.start = "2013-01-01T00:00:00Z", facet.date.end = last_month, facet.date.gap = "+1MONTH")
 dois <- dois$facet_dates$created
 dois$date <- as.Date(dois$date)
 ```
@@ -99,17 +97,18 @@ dois$date <- as.Date(dois$date)
 
 ```r
 ggplot(dois, aes(x=date, y=value)) +
-  ggtitle("DOIs for Software created by Month at Zenodo") +
+  ggtitle("DOIs for Preprint created by Month at OSF") +
   geom_bar(stat="identity") + 
   scale_x_date("Year") +
-  scale_y_continuous("DOI names", limits=c(0,5000)) +
+  scale_y_continuous("DOIs", limits=c(0,3000)) +
   theme(panel.background = element_rect(fill = "white"),
         axis.line = element_line(colour = "grey"),
         axis.title.x = element_text(hjust=1),
         axis.title.y = element_text(angle=0, vjust=1)) 
+  ggsave("datacite_preprints_OSF_plot.png") 
 ```
 
-![](figure/unnamed-chunk-6-1.png)<!-- -->
+![](figure/datacite_preprints_OSF_plot.png)<!-- -->
 
 What happened with DOI registration for software outside of Zenodo? For example Figshare and Bioconductor?
 
