@@ -113,7 +113,7 @@ ggplot(dois, aes(x=date, y=value)) +
 
 ![](figure/datacite_preprints_OSF_plot.png)<!-- -->
 
-The large peak in May 2017 observed in the figure for preprint DOIs overall is almost completely attributable to OSF. This peak likely indicates that OSF only then started to register DOI's for preprints at that time, registering DOIs for all preprints published on OSF until that time. NB OSF launched their first preprint servers in fall 2016. 
+The large peak in May 2017 observed in the figure for preprint DOIs overall is almost completely attributable to OSF. This peak likely indicates that OSF only then started to register DOI's for preprints, including for all preprints published since launching their first preprint servers in fall 2016. 
 
 This is corroborated by comparing the plots for overall number of DOIs from OSF an number of DOIs for text from OSF. 
 Prior to May 2017, OSF was already issuing DOIs for other entities, most likely projects.   
@@ -131,7 +131,9 @@ dois <- dc_facet(q = 'datacentre_symbol:CDL.COS AND resourceTypeGeneral:Text NOT
 ![](figure/datacite_OSF_plot.png)<!-- -->
 ![](figure/datacite_text_OSF_plot.png)<!-- -->
 
-Interestingly, there is a peak in OSF for text material in May 2018 that is not 
+Interestingly, there is a peak in OSF for text material in May 2018 that is not labeled as preprint in the metadata, and also in other recent months, there is a considerable number of text documents not labeled as preprints (see figure below). Whether either of these are responsible for the discrepancy between the total number of preprints on all OSF preprint servers as listed on  (11523 on May 17, 2018) and the number of DataCite DOIs for preprints from OSF (9027) remains to be investigated.  
+
+
 
 ## ResearchGate
 
