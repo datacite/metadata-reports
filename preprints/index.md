@@ -1,14 +1,13 @@
 # DataCite DOIs for preprints
 
 DataCite recently examined the DOIs that have been created for software (see https://doi.org/10.5438/1nmy-9902).
-I have used the [R code provided](https://github.com/datacite/metadata-reports/blob/master/software/index.md) to examine the DOIs that have been created for preprints.
+I have used the [R code provided](https://github.com/datacite/metadata-reports/blob/master/software/index.md) to examine the DOIs that have been created for preprints. Data collection was done on May 17-18, 2018. 
 
 The number of new DOIs created with 'Preprint' as resource type is growing rapidly, now reaching about 2500 preprint DOIs per month, most of them from OSF. 
 
 As the DataCite metadata field resourceType is a free-text field (so not based on controlled vocabulary), the reliability of these data is dependent on term usage across organizations and the consistency of term use within organizations.
 
-The data and results are shown here. Data collection was done on May 17-18, 2018. 
-
+The data and results are shown here, as follows:  
 
 
 Install the required packages (see [here](https://github.com/ropensci/rdatacite) for more information).
