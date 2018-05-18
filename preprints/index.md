@@ -1,5 +1,7 @@
-DataCite recently examined the DOIs that have been created for software (see https://doi.org/10.5438/1nmy-9902)
-I have used the [R code provided](https://github.com/datacite/metadata-reports/blob/master/software/index.md) to examine the DOIs that have been created for preprints
+#DataCite DOIs for preprints
+
+DataCite recently examined the DOIs that have been created for software (see https://doi.org/10.5438/1nmy-9902).
+I have used the [R code provided](https://github.com/datacite/metadata-reports/blob/master/software/index.md) to examine the DOIs that have been created for preprints.
 
 The number of new DOIs created with 'Preprint' as resource type is growing rapidly, now reaching about 2500 preprint DOIs per month.
 
@@ -88,7 +90,7 @@ ggplot(dois, aes(x=date, y=value)) +
 ## OSF
 
 
-Most of these DOIs for software are registered by OSF (COS). 
+Most of these DOIs for preprints are registered by OSF (COS). 
 
 
 ```r
@@ -115,8 +117,10 @@ ggplot(dois, aes(x=date, y=value)) +
 
 ![](figure/datacite_preprints_OSF_plot.png)<!-- -->
 
-The large peak in December 2017 (also observed in the overall figure) is almost completely attributable to OSF.
-*Still to do: plot overall DOIs for OSF (or only for ResourceTypeGeneral:Text) and compare*
+The large peak in December 2017 observed in the overall figure is almost completely attributable to OSF.
+
+*Still to do: plot overall DOIs for OSF (or only for ResourceTypeGeneral:Text) and compare.*
+*Monthly growth of preprints as reported by OSF?*
 
 
 ## ResearchGate
