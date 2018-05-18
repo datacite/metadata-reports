@@ -37,24 +37,23 @@ How many DOIs for preprints have been registered so far, and where?
 
 
 ```r
-dois <- dc_facet(q = "resourceType:Preprint AND created:[2013-01-01T00:00:00Z TO 2018-03-08T23:59:59Z]",facet.field = 'datacentre_facet', facet.sort = 'count', facet.limit = 10)
+dois <- dc_facet(q = "resourceType:Preprint",facet.field = 'datacentre_facet', facet.sort = 'count', facet.limit = 10)
 dois <- dois$facet_fields$datacentre_facet
 kable(dois, format = "markdown")
 ```
 
 |term                                                    |value |
 |:-------------------------------------------------------|:-----|
-|CDL.COS - Open Science Framework                        |9027  |
-|RG.RG - ResearchGate                                    |3221  |
-|CERN.ZENODO - ZENODO - Research. Shared.                |501   |
-|TIB.MFO - Mathematisches Forschungsinstitut Oberwolfach |267   |
+|CDL.COS - Open Science Framework                        |11419 |
+|RG.RG - ResearchGate                                    |7116  |
+|CERN.ZENODO - ZENODO - Research. Shared.                |599   |
+|FIGSHARE.ARS - figshare Academic Research System        |379   |
+|TIB.MFO - Mathematisches Forschungsinstitut Oberwolfach |276   |
 |TIB.SULBDOI - Universität des Saarlandes                |238   |
-|TIB.TUDO - Technische Universität Dortmund              |195   |
-|FIGSHARE.ARS - figshare Academic Research System        |189   |
+|TIB.TUDO - Technische Universität Dortmund              |197   |
 |GESIS.UBHD - University Library Heidelberg              |71    |
+|SND.SU - Stockholm University                           |58    |
 |TIB.UBS - Universitaetsbibliothek Stuttgart             |55    |
-|SND.SU - Stockholm University                           |40    |
-
 
 
 How did these numbers change over time?
