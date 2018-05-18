@@ -3,15 +3,11 @@
 DataCite recently examined the DOIs that have been created for software (see https://doi.org/10.5438/1nmy-9902).
 I have used the [R code provided](https://github.com/datacite/metadata-reports/blob/master/software/index.md) to examine the DOIs that have been created for preprints.
 
-The number of new DOIs created with 'Preprint' as resource type is growing rapidly, now reaching about 2500 preprint DOIs per month.
+The number of new DOIs created with 'Preprint' as resource type is growing rapidly, now reaching about 2500 preprint DOIs per month, most of them from OSF. 
 
-However, the total number of DOIs registered at OSF with this resource type (9027 on May 17, 2018) is less than the number of preprints hosted at OSF (11523 on May 17, 2018). 
-
-This raises the question whether all preprints are currently consistently assigned this resource type, and/or whether this resource type only became official a while after launch of the first OSF preprint servers in the fall of 2016. 
+As the DataCite metadata field resourceType is a free-text field (so not based on controlled vocabulary) this might be an underestimation. 
 
 The data and results are shown here, as follows:
-
-
 
 Install the required packages (see [here](https://github.com/ropensci/rdatacite) for more information).
 
@@ -117,11 +113,24 @@ ggplot(dois, aes(x=date, y=value)) +
 
 ![](figure/datacite_preprints_OSF_plot.png)<!-- -->
 
-The large peak in May 2017 observed in the overall figure is almost completely attributable to OSF.
+The large peak in May 2017 observed in the figure for preprint DOIs overall is almost completely attributable to OSF. This peak likely indicates that OSF only then started to register DOI's for preprints at that time, registering DOIs for all preprints published on OSF since OSF launched their first preprint servers in fall 2016. 
 
-*Still to do: plot overall DOIs for OSF (or only for ResourceTypeGeneral:Text) and compare.*
-*Monthly growth of preprints as reported by OSF?*
+This is corroborated by comparing the plots for overall number of DOIs from OSF an number of DOIs for text from OSF. 
+Prior to May 2017, OSF was already issuing DOIs for other entities, most likely projects.   
 
+```r
+# alternative query lines:
+#all OSF DOIs
+dois <- dc_facet(q = 'datacentre_symbol:CDL.COS', facet.date = 'created', facet.date.start = "2013-01-01T00:00:00Z", facet.date.end = last_month, facet.date.gap = "+1MONTH")
+#all OSF DOIs for text
+dois <- dc_facet(q = 'datacentre_symbol:CDL.COS AND resourceTypeGeneral:Text', facet.date = 'created', facet.date.start = "2013-01-01T00:00:00Z", facet.date.end = last_month, facet.date.gap = "+1MONTH")
+#all OSF DOIs for text excluding preprints
+dois <- dc_facet(q = 'datacentre_symbol:CDL.COS AND resourceTypeGeneral:Text NOT resourceType:Preprint', facet.date = 'created', facet.date.start = "2013-01-01T00:00:00Z", facet.date.end = last_month, facet.date.gap = "+1MONTH")
+```
+![](figure/datacite_OSF_plot)<!-- -->
+![](figure/datacite_text_OSF_plot.png)<!-- -->
+
+Interestingly, there is a peak in OSF for text material in May 2018 that is not 
 
 ## ResearchGate
 
