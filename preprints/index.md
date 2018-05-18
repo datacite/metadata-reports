@@ -5,7 +5,7 @@ I have used the [R code provided](https://github.com/datacite/metadata-reports/b
 
 The number of new DOIs created with 'Preprint' as resource type is growing rapidly, now reaching about 2500 preprint DOIs per month, most of them from OSF. 
 
-As the DataCite metadata field resourceType is a free-text field (so not based on controlled vocabulary), the reliability of these data is dependent on term usage across organizations and the consistency of term use within organizations.
+As the DataCite metadata field resourceType is a free-text field (so not based on controlled vocabulary), the reliability of these data is dependent on term usage across organizations registering preprints, and the consistency of term use within each organization. 
 
 The data and results are shown here, as follows:  
 
