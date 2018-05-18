@@ -117,7 +117,7 @@ ggplot(dois, aes(x=date, y=value)) +
 
 ![](figure/datacite_preprints_OSF_plot.png)<!-- -->
 
-The large peak in December 2017 observed in the overall figure is almost completely attributable to OSF.
+The large peak in May 2017 observed in the overall figure is almost completely attributable to OSF.
 
 *Still to do: plot overall DOIs for OSF (or only for ResourceTypeGeneral:Text) and compare.*
 *Monthly growth of preprints as reported by OSF?*
