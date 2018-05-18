@@ -9,6 +9,8 @@ As the DataCite metadata field resourceType is a free-text field (so not based o
 
 The data and results are shown here. Data collection was done on May 17-18, 2018. 
 
+
+
 Install the required packages (see [here](https://github.com/ropensci/rdatacite) for more information).
 
 NB Compared to the original script, I also had to install the curl package before getting the ropensci package to work. 
