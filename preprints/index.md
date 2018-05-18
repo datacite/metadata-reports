@@ -129,7 +129,7 @@ dois <- dc_facet(q = 'datacentre_symbol:CDL.COS AND resourceTypeGeneral:Text', f
 ![](figure/datacite_OSF_plot.png)<!-- -->
 ![](figure/datacite_text_OSF_plot.png)<!-- -->
 
-Interestingly, there is a peak in OSF for text material in May 2018 that is not labeled as preprint in the metadata. Also in other recent months, there is a considerable number of text documents not labeled as preprints (see figure below). Whether either of these are responsible for the discrepancy between the total number of preprints on all OSF preprint servers as listed on  (11523 on May 17, 2018) and the number of DataCite DOIs for preprints from OSF (9027 on May 17, 2018) remains to be investigated.  
+Interestingly, there is a peak in OSF for text material in May 2018 that is not labeled as preprint in the metadata. For the months between June 2017-April 2018 there is also a considerable number of text documents not labeled as preprints (see figure below). Whether either of these are responsible for the discrepancy between the total number of preprints on all OSF preprint servers as listed on  (11523 on May 17, 2018) and the number of DataCite DOIs for preprints from OSF (9027 on May 17, 2018), for instance because of inconsistent use of metadata, remains to be investigated.  
 
 ```r
 # alternative query line to use in script:
