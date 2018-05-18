@@ -7,7 +7,7 @@ The number of new DOIs created with 'Preprint' as resource type is growing rapid
 
 As the DataCite metadata field resourceType is a free-text field (so not based on controlled vocabulary), the reliability of these data is dependent on term usage across organizations and the consistency of term use within organizations.
 
-The data and results are shown here, as follows:
+The data and results are shown here. Data collection was done on May 17-18, 2018. 
 
 Install the required packages (see [here](https://github.com/ropensci/rdatacite) for more information).
 
