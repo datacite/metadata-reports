@@ -5,7 +5,7 @@ I have used the [R code provided](https://github.com/datacite/metadata-reports/b
 
 The number of new DOIs created with 'Preprint' as resource type is growing rapidly, now reaching about 2500 preprint DOIs per month, most of them from OSF. 
 
-As the DataCite metadata field resourceType is a free-text field (so not based on controlled vocabulary) this might be an underestimation. 
+As the DataCite metadata field resourceType is a free-text field (so not based on controlled vocabulary), the reliability of these data is dependent on term usage across organizations and the consistency of term use within organizations.
 
 The data and results are shown here, as follows:
 
@@ -113,7 +113,7 @@ ggplot(dois, aes(x=date, y=value)) +
 
 ![](figure/datacite_preprints_OSF_plot.png)<!-- -->
 
-The large peak in May 2017 observed in the figure for preprint DOIs overall is almost completely attributable to OSF. This peak likely indicates that OSF only then started to register DOI's for preprints at that time, registering DOIs for all preprints published on OSF since OSF launched their first preprint servers in fall 2016. 
+The large peak in May 2017 observed in the figure for preprint DOIs overall is almost completely attributable to OSF. This peak likely indicates that OSF only then started to register DOI's for preprints at that time, registering DOIs for all preprints published on OSF until that time. NB OSF launched their first preprint servers in fall 2016. 
 
 This is corroborated by comparing the plots for overall number of DOIs from OSF an number of DOIs for text from OSF. 
 Prior to May 2017, OSF was already issuing DOIs for other entities, most likely projects.   
@@ -127,7 +127,8 @@ dois <- dc_facet(q = 'datacentre_symbol:CDL.COS AND resourceTypeGeneral:Text', f
 #all OSF DOIs for text excluding preprints
 dois <- dc_facet(q = 'datacentre_symbol:CDL.COS AND resourceTypeGeneral:Text NOT resourceType:Preprint', facet.date = 'created', facet.date.start = "2013-01-01T00:00:00Z", facet.date.end = last_month, facet.date.gap = "+1MONTH")
 ```
-![](figure/datacite_OSF_plot)<!-- -->
+
+![](figure/datacite_OSF_plot.png)<!-- -->
 ![](figure/datacite_text_OSF_plot.png)<!-- -->
 
 Interestingly, there is a peak in OSF for text material in May 2018 that is not 
