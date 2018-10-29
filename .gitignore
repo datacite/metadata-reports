@@ -15,6 +15,7 @@
 vignettes/*.html
 vignettes/*.pdf
 .Rproj.user
+.ipynb_checkpoints
 
 cache
 .httr-oauth
