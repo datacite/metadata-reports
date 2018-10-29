@@ -1,0 +1,31 @@
+{
+	"@context": "https://raw.githubusercontent.com/codemeta/codemeta/master/codemeta.jsonld",
+	"@type": "SoftwareSourceCode",
+	"@id": "",
+	"agents": [{
+		"@id": "http://orcid.org/0000-0003-3484-6875",
+		"@type": "person",
+		"name": "Garza, Kristian",
+		"givenName": "Kristian",
+		"familyName": "Garza",
+		"mustBeCited": true,
+		"isMaintainer": true,
+		"isRightsHolder": true
+	}],
+	"identifier": "",
+	"codeRepository": "https://github.com/datacite/metadata-reports/mimolette",
+	"controlledTem": "software",
+	"dateCreated": "2018-05-19",
+	"datePublished": "2018-10-05",
+	"dateModified": "2018-10-29",
+	"description": "Exploration of Data citation in Crossref DaataCite Event Data Service",
+	"isAutomatedBuild": true,
+	"licenseId": "MIT",
+	"publisher": "DataCite",
+	"relatedLink": "https://doi.org/10.5281/zenodo.1472279",
+	"title": "Exploration of Data citation in Crossref DaataCite Event Data Service",
+	"programmingLanguage": {
+		"name": "R",
+		"URL": "https://www.r-project.org/"
+	}
+}
