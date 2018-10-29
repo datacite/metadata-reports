@@ -6,7 +6,7 @@ library(RColorBrewer)
 library(tidyr)
 library(psych)
 
-plot_slopegraph<-function(slope_df){
+plot_slopegraph<-function(y_label,slope_df){
     print(describe(slope_df$`2017`))
     print(describe(slope_df$`2018`))
 
@@ -14,13 +14,15 @@ plot_slopegraph<-function(slope_df){
     left_label <- paste(slope_df$registrant_name, round(slope_df$`2017`, digits = 2),sep=", ")
     right_label <- paste(slope_df$registrant_name, round(slope_df$`2018`, digits = 2),sep=", ")
     slope_df$class <- ifelse((slope_df$`2018` < slope_df$`2017`), "green", "green")
+    
+#     y_labels<- ifelse((y_label == NULL), "Article to Dataset Links", y_label)
 
     p <- ggplot(slope_df) + geom_segment(aes(x=1.5, xend=2, y=`2017`, yend=`2018`, col=class), size=.75, show.legend=F) + 
                       geom_vline(xintercept=1.5, linetype="dashed", size=.1) + 
                       geom_vline(xintercept=2, linetype="dashed", size=.1) +
                       scale_color_manual(labels = c("Up", "Down"), 
                                          values = c("green"="#00ba38", "red"="#f8766d")) +  # color of lines
-                      labs(x="Change in Links Counts", y="Article to Dataset Links") +  # Axis labels
+                      labs(x="Change in Links Counts", y=y_label) +  # Axis labels
                       xlim(.5, 2.5) + ylim(0,(1.1*(max(slope_df$`2017`, slope_df$`2018`))))  # X and Y axis limits
                         
 
